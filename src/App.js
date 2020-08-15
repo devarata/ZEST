@@ -18,8 +18,6 @@ function App() {
           <Switch>
           <Route path="/room/:roomId">
           <Chat/>
-
-            <h1>Chat Screen</h1>
           </Route>
           <Route path="/">
             <h1>Welcome</h1>
