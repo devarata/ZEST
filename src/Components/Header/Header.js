@@ -11,7 +11,7 @@ function Header() {
         <div className="header__left">
           <Avatar className="header__avatar" src="" alt="Devarata Oza"/>
           <AccessTimeIcon/>
-          {/*Time icon*/}
+
         </div>
         <div className="header__search">
           <SearchIcon/>
