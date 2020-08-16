@@ -5,7 +5,7 @@ import StarBorderOutlinedIcon from "@material-ui/icons/StarBorderOutlined"
 import InfoOutlinedIcon from "@material-ui/icons/InfoOutlined"
 import db from '../../firebase'
 import Message from '../Message/Message'
-import ChatInput from '../ChatInput/ChatInput'
+import ChatInput from '../ChatInput/ChatInput.js'
 
 
 function Chat() {
