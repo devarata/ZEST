@@ -6,6 +6,7 @@ import {Route, BrowserRouter as Router,Switch} from  "react-router-dom"
 import Chat from './Components/SlackComponents/Chat/Chat'
 import Login from './Components/SlackComponents/Login/Login'
 import {useStateValue} from "./StateProvider"
+import EditorNote from './Components/EditorNoteComponents/EditorNote/EditorNote'
 
 function App() {
   const [{user},dispatch] = useStateValue()
@@ -16,20 +17,7 @@ function App() {
         {
           !user?(<Login/>): (
             <>
-            <Header/>
-            <div className="app__body">
-              <Sidebar/>
-
-              <Switch>
-              <Route path="/room/:roomId">
-              <Chat/>
-              </Route>
-              <Route path="/">
-                <h1>Welcome</h1>
-              </Route>
-              </Switch>
-
-            </div>
+            <EditorNote/>
             </>
           )
         }

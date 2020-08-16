@@ -4,11 +4,8 @@ import {Avatar} from '@material-ui/core';
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import SearchIcon from '@material-ui/icons/Search';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
-import {useStateValue} from '../../../StateProvider.js';
-import HomeIcon from '@material-ui/icons/Home';
-import VideoCallIcon from '@material-ui/icons/VideoCall';
-import NoteIcon from '@material-ui/icons/Note';
-import ListAltIcon from '@material-ui/icons/ListAlt';
+import {useStateValue} from '../../StateProvider.js'
+//import {actionType} from '../../reducer.js'
 
 
 function Header() {
@@ -19,7 +16,7 @@ function Header() {
     <div className="header">
         <div className="header__left">
           <Avatar className="header__avatar" src={user?.photoURL} alt={user?.displayName}/>
-
+          <AccessTimeIcon/>
         </div>
         <div className="header__search">
           <SearchIcon/>
@@ -27,13 +24,7 @@ function Header() {
         </div>
         <div className="header__right">
         <HelpOutlineIcon/>
-        <HomeIcon/>
-        <VideoCallIcon/>
-        <NoteIcon/>
-        <ListAltIcon/>
-
         </div>
-
     </div>
   )
 }
