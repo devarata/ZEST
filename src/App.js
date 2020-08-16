@@ -1,14 +1,14 @@
 import React , {useState} from 'react';
 import './App.css';
-import Header from './Components/Header/Header'
-import Sidebar from './Components/Sidebar/Sidebar'
+import Header from './Components/SlackComponents/Header/Header'
+import Sidebar from './Components/SlackComponents/Sidebar/Sidebar'
 import {Route, BrowserRouter as Router,Switch} from  "react-router-dom"
-import Chat from './Components/Chat/Chat'
-import Login from './Components/Login/Login'
+import Chat from './Components/SlackComponents/Chat/Chat'
+import Login from './Components/SlackComponents/Login/Login'
 import {useStateValue} from "./StateProvider"
 
 function App() {
-  
+
   const [{user},dispatch] = useStateValue()
 
   return (

@@ -13,8 +13,8 @@ import ExpandLessIcon from '@material-ui/icons/ExpandLess';
 import AlternateEmailIcon from '@material-ui/icons/AlternateEmail';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import AddIcon from '@material-ui/icons/Add'
-import db from '../../firebase'
-import {useStateValue} from '../../StateProvider.js'
+import db from '../../../firebase'
+import {useStateValue} from '../../../StateProvider.js'
 
 
 function Sidebar() {
