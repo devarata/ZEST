@@ -11,12 +11,19 @@ class Editor extends React.Component {
 
   constructor() {
     super ();
+
+    this.state={
+      text: '',
+      title:'',
+      id:''
+    };
+
   }
 
   render() {
     return (
       <div>
-        <h1>Editor</h1>
+
       </div>
     )
   }

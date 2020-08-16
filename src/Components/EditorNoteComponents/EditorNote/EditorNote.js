@@ -1,6 +1,8 @@
 import React , {Component} from 'react'
 import './EditorNote.css'
 import db from '../../../firebase'
+import Sidebar from '../Sidebar/Sidebar.js'
+import Editor from '../Editor/Editor.js'
 
 class EditorNote extends Component {
 
@@ -31,7 +33,11 @@ componentDidMount() {
 
 render(){
   return (
-    <div>MyComponent</div>
+    <div className="editor_main_container">
+      <Sidebar/>
+      <Editor/>
+    </div>
+
   )
 }
 

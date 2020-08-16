@@ -1,6 +1,6 @@
 import React from 'react';
 import { withStyles } from '@material-ui/core/styles';
-import styles from './styles';
+import styles from './style';
 import List from '@material-ui/core/List';
 import { Divider, Button } from '@material-ui/core';
 import SidebarItem from '../SidebarItem/SidebarItem';
@@ -9,8 +9,12 @@ import SidebarItem from '../SidebarItem/SidebarItem';
 class Sidebar extends React.Component{
 
   constructor() {
-    super();
-  }
+   super();
+   this.state = {
+     addingNote: false,
+     title: null
+   };
+ }
 
   render() {
     return (
