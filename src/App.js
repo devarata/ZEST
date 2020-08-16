@@ -8,7 +8,6 @@ import Login from './Components/SlackComponents/Login/Login'
 import {useStateValue} from "./StateProvider"
 
 function App() {
-
   const [{user},dispatch] = useStateValue()
 
   return (
