@@ -1,4 +1,4 @@
-import React from 'react';
+import React , {useState} from 'react';
 import './App.css';
 import Header from './Components/Header/Header'
 import Sidebar from './Components/Sidebar/Sidebar'
@@ -7,29 +7,36 @@ import Chat from './Components/Chat/Chat'
 
 
 function App() {
+
+  const [user,setUser]=useState(null);
+
+
   return (
     <div className="app">
       <Router>
-        <Header/>
+        {
+          !user?(<Login/>): (
+            <>
+            <Header/>
+            <div className="app__body">
+              <Sidebar/>
 
-        <div className="app__body">
-          <Sidebar/>
+              <Switch>
+              <Route path="/room/:roomId">
+              <Chat/>
+              </Route>
+              <Route path="/">
+                <h1>Welcome</h1>
+              </Route>
+              </Switch>
 
-          <Switch>
-          <Route path="/room/:roomId">
-          <Chat/>
-          </Route>
-          <Route path="/">
-            <h1>Welcome</h1>
-          </Route>
-          </Switch>
+            </div>
+            </>
+          )
+        }
 
-        </div>
+
       </Router>
-
-
-
-      {/*React Router Chat screen*/}
     </div>
   );
 
