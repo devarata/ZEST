@@ -34,7 +34,9 @@ componentDidMount() {
 render(){
   return (
     <div className="editor_main_container">
-      <Sidebar/>
+      <Sidebar selectedNoteIndex={this.state.selectedNoteIndex}
+        notes={this.state.notes}
+      />
       <Editor/>
     </div>
 
