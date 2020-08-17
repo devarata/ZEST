@@ -3,6 +3,7 @@ import './EditorNote.css'
 import db from '../../../firebase'
 import Sidebar from '../Sidebar/Sidebar.js'
 import Editor from '../Editor/Editor.js'
+import firebase from "firebase"
 
 class EditorNote extends Component {
 
@@ -17,9 +18,9 @@ constructor() {
 
   }
 
-componentDidMount() {
-  db.collection('notes').onSnapshot((notesUpdate)=>{
-    const notes = notesUpdate.docs.map(doc=>{
+componentDidMount = ()=> {
+  db.collection('notes').onSnapshot((serverUpdate)=>{
+    const notes = serverUpdate.docs.map(doc=>{
       const data = doc.data();
       data['id']=doc.id;
       return data;
@@ -28,16 +29,36 @@ componentDidMount() {
     this.setState(
           { notes: notes }
         )
-  })
+})
   }
+
+selectNote=(note,index)=>{
+  this.setState({selectedNoteIndex:index, selectedNote:note})
+}
+
+noteUpdate=(id,noteObj)=>{
+  db.collection('notes').doc(id).update({
+    title: noteObj.title,
+    body: noteObj.body,
+    timestamp: firebase.firestore.FieldValue.serverTimestamp()
+  })
+}
+
 
 render(){
   return (
     <div className="editor_main_container">
       <Sidebar selectedNoteIndex={this.state.selectedNoteIndex}
         notes={this.state.notes}
+        deleteNote={this.deleteNote}
+        selectNote={this.selectNote}
+        newNote={this.newNote}
       />
-      <Editor/>
+      {
+        this.state.selectedNote?
+        <Editor selectedNote={this.state.selectedNote} selectedNoteIndex={this.state.selectedNoteIndex} notes={this.state.notes} noteUpdate={this.noteUpdate}/>
+        : null
+      }
     </div>
 
   )
