@@ -4,7 +4,7 @@ import styles from './style';
 import List from '@material-ui/core/List';
 import { Divider, Button } from '@material-ui/core';
 import SidebarItem from '../SidebarItem/SidebarItem';
-
+import db from '../../../firebase'
 
 class Sidebar extends React.Component{
 
@@ -25,7 +25,11 @@ class Sidebar extends React.Component{
  }
 
 newNote=()=>{
-  console.log(this.state)
+  this.props.newNote(this.state.title);
+  this.setState({
+    title:null,
+    addingNote:false
+  })
 }
 
 
@@ -33,9 +37,7 @@ selectNote=(note,index)=>{
   this.props.selectNote(note,index)
 }
 
-deleteNote=()=>{
-  console.log('delete note')
-}
+deleteNote=(note)=>this.props.deleteNote(note)
 
   render() {
 
@@ -63,7 +65,7 @@ deleteNote=()=>{
                 notes.map((note,index)=>{
                   return(
                     <div key={index}>
-                      <SidebarItem note={note} index={index} selectedNoteIndex={selectedNoteIndex} selectNote={this.selectNote}/>
+                      <SidebarItem note={note} index={index} selectedNoteIndex={selectedNoteIndex} selectNote={this.selectNote} deleteNote={this.deleteNote}/>
                       <Divider/>
                     </div>
                   )
