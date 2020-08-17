@@ -91,7 +91,7 @@ newNote = async(title)=>{
 
 render(){
   return (
-    <div className="editor_main_container">
+    <div className="app-container">
       <Sidebar selectedNoteIndex={this.state.selectedNoteIndex}
         notes={this.state.notes}
         deleteNote={this.deleteNote}
