@@ -49,7 +49,7 @@ deleteNote= async (note)=> {
   await this.setState({
     notes: this.state.notes.filter(_note=> _note!==note)
   })
-  if(this.state.selectedNoteIndex==noteIndex)
+  if(this.state.selectedNoteIndex===noteIndex)
   {
     this.setState({
       selectedNoteIndex:null,

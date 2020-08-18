@@ -7,6 +7,7 @@ import Chat from './Components/SlackComponents/Chat/Chat'
 import Login from './Components/SlackComponents/Login/Login'
 import {useStateValue} from "./StateProvider"
 import EditorNote from './Components/EditorNoteComponents/EditorNote/EditorNote'
+import Trello from './Components/TrelloComponents/Trello/Trello.js'
 
 function App() {
   const [{user},dispatch] = useStateValue()
@@ -17,7 +18,7 @@ function App() {
         {
           !user?(<Login/>): (
             <>
-            <EditorNote/>
+            <Trello/>
             </>
           )
         }
