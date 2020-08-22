@@ -1,31 +1,24 @@
 import React, { useState } from 'react';
 import { v4 as uuid } from 'uuid';
 import List from '../List/List';
-import store from '../TrelloUtils/store.js';
-import '../TrelloUtils/storeApi.js';
+import store from '../utils/store';
+import StoreApi from '../utils/storeApi';
 import InputContainer from '../Input/InputContainer';
 import { makeStyles } from '@material-ui/core/styles';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
-import TopBar from '../TopBar/TopBar.js';
-import SideMenu from '../SideMenu/SideMenu.js';
 
 const useStyle = makeStyles((theme) => ({
   root: {
+    display: 'flex',
     minHeight: '100vh',
     background: 'green',
     width: '100%',
     overflowY: 'auto',
   },
-  listContainer: {
-    display: 'flex',
-  },
 }));
 
 function Trello() {
   const [data, setData] = useState(store);
-  const [open, setOpen] = useState(false);
-
-  const [backgroundUrl, setBackgroundUrl] = useState('');
   const classes = useStyle();
   const addMoreCard = (title, listId) => {
     console.log(title, listId);
@@ -126,45 +119,29 @@ function Trello() {
       setData(newState);
     }
   };
-
   return (
     <StoreApi.Provider value={{ addMoreCard, addMoreList, updateListTitle }}>
-      <div
-        className={classes.root}
-        style={{
-          backgroundImage: `url(${backgroundUrl})`,
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-        }}
-      >
-        <TopBar setOpen={setOpen} />
-
-        <DragDropContext onDragEnd={onDragEnd}>
-          <Droppable droppableId="app" type="list" direction="horizontal">
-            {(provided) => (
-              <div
-                className={classes.listContainer}
-                ref={provided.innerRef}
-                {...provided.droppableProps}
-              >
-                {data.listIds.map((listId, index) => {
-                  const list = data.lists[listId];
-                  return <List list={list} key={listId} index={index} />;
-                })}
-                <InputContainer type="list" />
-                {provided.placeholder}
-              </div>
-            )}
-          </Droppable>
-        </DragDropContext>
-        <SideMenu
-          setBackgroundUrl={setBackgroundUrl}
-          open={open}
-          setOpen={setOpen}
-        />
-      </div>
+      <DragDropContext onDragEnd={onDragEnd}>
+        <Droppable droppableId="app" type="list" direction="horizontal">
+          {(provided) => (
+            <div
+              className={classes.root}
+              ref={provided.innerRef}
+              {...provided.droppableProps}
+            >
+              {data.listIds.map((listId, index) => {
+                const list = data.lists[listId];
+                return <List list={list} key={listId} index={index} />;
+              })}
+              <InputContainer type="list" />
+              {provided.placeholder}
+            </div>
+          )}
+        </Droppable>
+      </DragDropContext>
     </StoreApi.Provider>
   );
 }
 
-export default Trello
+
+export default Trello;

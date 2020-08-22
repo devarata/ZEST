@@ -5,6 +5,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import {StateProvider} from './StateProvider'
 import {initialState, reducer  } from './reducer.js'
+import {Provider} from "react-redux"
 
 
 
