@@ -6,6 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import HelpOutlineIcon from '@material-ui/icons/HelpOutline';
 import {useStateValue} from '../../StateProvider.js'
 //import {actionType} from '../../reducer.js'
+import {Link} from 'react-router-dom';
 
 
 function Header() {

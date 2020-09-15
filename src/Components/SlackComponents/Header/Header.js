@@ -9,6 +9,7 @@ import HomeIcon from '@material-ui/icons/Home';
 import VideoCallIcon from '@material-ui/icons/VideoCall';
 import NoteIcon from '@material-ui/icons/Note';
 import ListAltIcon from '@material-ui/icons/ListAlt';
+import {Link } from 'react-router-dom';
 
 
 function Header() {
@@ -27,10 +28,10 @@ function Header() {
         </div>
         <div className="header__right">
         <HelpOutlineIcon/>
-        <HomeIcon/>
-        <VideoCallIcon/>
-        <NoteIcon/>
-        <ListAltIcon/>
+        <Link  to="/"><HomeIcon className="header__right__icon"/></Link>
+        <Link  to="/zoom"><VideoCallIcon className="header__right__icon"/></Link>
+        <Link  to="/evernote"><NoteIcon className="header__right__icon"/></Link>
+        <Link  to="/trello"><ListAltIcon className="header__right__icon"/></Link>
 
         </div>
 

@@ -18,7 +18,19 @@ function App() {
         {
           !user?(<Login/>): (
             <>
-            <Trello/>
+            <Header/>
+            <div className="app__body">
+             <Sidebar/>
+
+             <Switch>
+             <Route path="/room/:roomId">
+             <Chat/>
+             </Route>
+             <Route exact path="/">
+               <h1>Welcome</h1>
+             </Route>
+             </Switch>
+            </div>
             </>
           )
         }

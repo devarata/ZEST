@@ -29,6 +29,10 @@ export default function InputCard({ setOpen, listId, type }) {
   const { addMoreCard, addMoreList } = useContext(storeApi);
   const [title, setTitle] = useState('');
 
+  const cancelCard = ()=>{
+
+  }
+
   const handleOnChange = (e) => {
     setTitle(e.target.value);
   };
@@ -69,7 +73,7 @@ export default function InputCard({ setOpen, listId, type }) {
         <Button className={classes.btnConfirm} onClick={handleBtnConfirm}>
           {type === 'card' ? 'Add Card' : 'Add List'}
         </Button>
-        <IconButton onClick={() => setOpen(false)}>
+        <IconButton onClick={cancelCard}>
           <ClearIcon />
         </IconButton>
       </div>
