@@ -26,15 +26,15 @@ ZEST is built using the following technologies:
 
 To run ZEST locally, follow these steps:
 
-Clone the repository:
-git clone https://github.com/your-username/zest.git
+  1. Clone the repository:
+  `git clone https://github.com/your-username/zest.git`
 
-To install dependencies:
-cd zest
-npm install
+  2.To install dependencies:
+  `cd zest
+  npm install`
 
-Start development server:
-npm start
+  3. Start development server:
+` npm start `
 
-Open your browser and navigate to http://localhost:3000
+Open your browser and navigate to `http://localhost:3000`
 
