@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#ZEST: All-in-One Office Suite
+ZEST is an all-in-one office suite that combines the features of Zoom, Evernote, Slack, and Trello. It provides users with a seamless experience for video calling, note-taking, chat, project planning, and persistent sign-in/sign-up functionalities.
 
-## Available Scripts
+##Features
+Video calling: ZEST provides users with a video calling feature, powered by WebRTC. Users can easily connect with each other and have virtual face-to-face conversations.
 
-In the project directory, you can run:
+Note-taking: ZEST includes a note-taking feature that allows users to take notes during meetings, add comments, and collaborate with their team members.
 
-### `npm start`
+Chat: With ZEST's chat feature, users can easily communicate with their colleagues in real-time. They can create channels and send direct messages, making it easy to stay connected with their team.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Project planning: ZEST includes a project planning feature that allows users to create boards, cards, and lists to manage their projects. They can add due dates, checklists, and comments, making it easy to stay on top of their tasks.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Persistent sign-in/sign-up: ZEST provides users with a persistent sign-in/sign-up functionality. Once users sign in, they can stay signed in across devices, making it easy to switch between devices and continue where they left off.
 
-### `npm test`
+##Tech Stack: 
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ZEST is built using the following technologies:
 
-### `npm run build`
+React.js
+Express.js
+Node.js
+Firebase
+WebRTC
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Installation
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+To run ZEST locally, follow these steps:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Clone the repository:
+git clone https://github.com/your-username/zest.git
 
-### `npm run eject`
+To install dependencies:
+cd zest
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Start development server:
+npm start
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Open your browser and navigate to http://localhost:3000
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
