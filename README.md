@@ -1,6 +1,9 @@
 # ZEST: All-in-One Office Suite
 ZEST is an all-in-one office suite that combines the features of Zoom, Evernote, Slack, and Trello. It provides users with a seamless experience for video calling, note-taking, chat, project planning, and persistent sign-in/sign-up functionalities.
 
+<img width="1279" alt="Screenshot 2023-12-12 at 7 51 50 PM" src="https://github.com/devarata/ZEST/assets/26374240/d35738de-c97c-4901-a20f-01b53b85aea7">
+
+
 ## Features
 - Video calling: ZEST provides users with a video calling feature, powered by WebRTC. Users can easily connect with each other and have virtual face-to-face conversations.
 
