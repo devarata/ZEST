@@ -27,7 +27,7 @@ ZEST is built using the following technologies:
 To run ZEST locally, follow these steps:
 
   1. Clone the repository:
-  `git clone https://github.com/your-username/zest.git`
+  `https://github.com/devarata/ZEST.git`
 
   2. To install dependencies:
   `cd zest`
